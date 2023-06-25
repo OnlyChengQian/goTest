@@ -1,0 +1,57 @@
+database:
+  Name: db_advtmanager_allegro
+  Host: 127.0.0.1
+  Port: 3306
+  User: root
+  Pass: 123456
+  MaxOpenConns: 10
+  MaxIdleConns: 5
+  MaxIdleTime: 60
+  MaxLifetime: 60
+
+
+redis:
+  Host: 127.0.0.1
+  User: root
+  Port: 6379
+  Auth: 123456
+  #最大空闲连接数
+  MaxIdle: 10
+  #表示和数据库最大连接数。0表示没有限制
+  MaxActive: 20
+  #最大空闲时间
+  IdleTimeout: 1000
+
+
+rabbitMQ:
+  Host: 127.0.0.1
+  Port: 5672
+  User: admin
+  Pass: admin
+  Vhost: /
+  #连接池中最小连接数
+  MinConnCap: 2
+  #最大并发存活连接数
+  MaxLifeCap: 10
+  #最大空闲连接
+  MaxIdle: 10
+  #连接最大空闲时间，超出该事件则将失效 s
+  IdleTimeout: 15
+
+mongoDB:
+  Host: 127.0.0.1
+  Port: 27017
+  User:
+  Auth:
+  Database:
+  MaxConn: 10
+
+#系统配置
+server:
+  #端口
+  Port: 8081
+  #加密key
+  AppKey: abcdefghijklmnop
+  Debug: true
+  #jsonRpc端口
+  RpcPort:
